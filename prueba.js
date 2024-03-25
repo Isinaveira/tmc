@@ -89,27 +89,24 @@ function procesaPedidos(productosPedidosStock, productosPrereparto){
                 return acc + producto.stockEm01 + producto.stockEm05; 
                 }, 0); 
                
-               if( stockTotal < productoPedido.propuesta){
-                    console.log("No hay stock");
-                    
-                }else{
+               if( stockTotal > productoPedido.propuesta){
                     let winner = stockDelProductoPedido.find( stock => productoPedido.propuesta <= stock.stockEm05);
                     // si hay, entrega el primero, 
                     if( winner ) {
                         pedidosProcesados.push({
                             key: winner.key,
-                            idTienda: productoPedido.idTienda,
+                            idTienda: productoPedido.tiendaId,
                             propuesta: productoPedido.propuesta,
                             tipoStockDesc: winner.tipoStockDesc,
                             EstadoStock: 5,
-                            posicionCompleta: winner.posicionCompleta
+                            posicionCompleta: winner.posicioncompleta
                         })
                     }else {
                         let winner = stockDelProductoPedido.find( stock => productoPedido.propuesta <= stock.stockEm01);
                         if(winner){
                             pedidosProcesados.push({
                                 key: winner.key,
-                                idTienda: productoPedido.idTienda,
+                                idTienda: productoPedido.tiendaId,
                                 propuesta: productoPedido.propuesta,
                                 tipoStockDesc: winner.tipoStockDesc,
                                 EstadoStock: 1,
