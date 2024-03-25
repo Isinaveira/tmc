@@ -40,6 +40,8 @@ Revisando los datos me he dado cuenta de que el archivo del almacén (stock_unif
 ¿No sería necesario utilizar los datos del fichero de prereparto? 
  stockZarEm05, stockSiloPaleEm05, ... y buscar en esos datos? 
  Es decir formar las siguiente estructuras y calcular ahí si tengo suficiente stock para completar el pedido? 
+  ``` json
+
   stockEm05: {
     cantidad_total: 200,
     stockZarEm05: 120,
@@ -52,3 +54,4 @@ Revisando los datos me he dado cuenta de que el archivo del almacén (stock_unif
     stockMsrEm01: 100,
     stockSiloPaleEm01: 80
   }
+```
