@@ -1,0 +1,16 @@
+{
+  "name": "prueba-tecnica-full-stack",
+  "version": "1.0.0",
+  "description": "Prueba técnica para TMC",
+  "main": "prueba.js",
+  "scripts": {
+    "start": "node prueba.js"
+  },
+  "author": "Isaac Naveira",
+  "license": "ISC",
+  "dependencies": {
+    "event-stream": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "JSONStream": "^1.3.5"
+  }
+}
